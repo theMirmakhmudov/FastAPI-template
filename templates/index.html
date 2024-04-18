@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Workbench&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        th {
+            width: 50%;
+
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+    <title>FastApi</title>
+</head>
+<body>
+<h1>FastApi</h1>
+
+<center>
+    <h1>Users data</h1>
+    <table border>
+        <tr>
+            <th>Name</th>
+            <th>Direction</th>
+        </tr>
+        {% for info in data %}
+            <tr>
+                <th>{{ info.name }}</th>
+                <th>{{ info.direction }}</th>
+            </tr>
+        {% endfor %}
+
+    </table>
+</center>
+
+</body>
+</html>
